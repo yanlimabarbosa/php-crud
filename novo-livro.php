@@ -1,4 +1,4 @@
-<form action="?page=salvar" method="POST" class="form">
+<form action="?page=salvar" method="POST" class="form glass">
   <h1 class="title">Cadastre um Novo Livro</h1>
   <h1 class="subtitle">Preencha os dados</h1>
   <input type="hidden" name="acao" value="cadastrar">

@@ -1,4 +1,3 @@
-<h1>Listar Livros</h1>
 <?php
 $sql = "SELECT * FROM livros";
 
@@ -7,7 +6,7 @@ $res = $conn->query($sql);
 $qtd = $res->num_rows;
 
 if ($qtd > 0) {
-  print "<table>";
+  print "<table class='content-table'>";
   print "<tr>";
   print "<th> Id </th>";
   print "<th> Nome </th>";

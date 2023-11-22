@@ -10,19 +10,19 @@
 
   <body>
     <nav>
-      <div>
-        <ul>
-          <li>
-            <a aria-current="page" href="index.php">Home</a>
-          </li>
-          <li>
-            <a href="?page=novo">Novo Livro</a>
-          </li>
-          <li>
-            <a href="?page=listar">Listar Livros</a>
-          </li>
-        </ul>
-      </div>
+      <div class="logo"><a href="#">Gerenciamento Fácil</a> </div>
+      <ul>
+        <li>
+          <a aria-current="page" href="index.php">Home</a>
+        </li>
+        <li>
+          <a href="?page=novo">Novo Livro</a>
+        </li>
+        <li>
+          <a href="?page=listar">Listar Livros</a>
+        </li>
+      </ul>
+
     </nav>
 
     <div>

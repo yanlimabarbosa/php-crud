@@ -1,22 +1,45 @@
 /* styles.css */
 
+html,
+body {
+  height: 100%;
+}
+
 body {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  background-image: url("./assets/background-img/colecao-abundante-de-livros-antigos-em-prateleiras-de-madeira-geradas-por-ia_188544-29660.jpg");
+  background-image: url("./assets/background-img/background.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100%;
+  box-sizing: border-box;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.667),
+    rgba(0, 0, 0, 0.667)
+  );
   backdrop-filter: blur(10px);
-  height: 100vh;
+  z-index: -1;
 }
 
 nav {
   background-color: #333;
   color: white;
   padding: 10px;
+  margin-bottom: 2rem;
 }
 
 nav ul {
@@ -58,40 +81,12 @@ select {
   width: 100%;
   max-width: 768px;
   border-radius: 16px;
-  background: #ffc392;
+  background: rgb(255, 255, 255);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   max-width: 80%;
 }
 
-table {
-  margin: 0 auto;
-  width: 80%;
-  border-collapse: collapse;
-  margin-top: 20px;
-  border-radius: 1rem;
-}
-
-th,
-td {
-  padding: 1px;
-  text-align: left;
-  color: gray;
-  background-color: white;
-  border: 2px solid rgb(30, 30, 30);
-}
-
-th {
-  background-color: #ffffff;
-  color: rgb(0, 0, 0);
-  padding: 1rem;
-}
-
-td {
-  padding: 0 auto;
-}
-
 button {
-  display: flex;
   padding: 10px;
   background-color: #333;
   color: white;
@@ -106,16 +101,16 @@ button:hover {
 .form {
   margin: 0.5rem auto;
   padding-top: 1rem;
+  margin-top: 1.8rem;
   padding-bottom: 1rem;
   justify-content: center;
-  background: rgb(255, 255, 255);
   box-shadow: 3px 4px 10px 0px rgba(0, 0, 0, 0.25);
   max-width: 30%;
   border-radius: 16px;
 }
 
 .title {
-  color: #000;
+  color: #ffffff;
   text-align: center;
   font-size: 32px;
   font-style: normal;
@@ -125,13 +120,16 @@ button:hover {
 }
 
 .subtitle {
-  margin: 0 7rem;
-  color: #000;
+  color: #ffffffb1;
   font-size: 19px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  margin-bottom: 1rem;
+  margin: 0;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #inputNome:placeholder-shown + .label-novo-livro {
@@ -157,7 +155,7 @@ button:hover {
 
 input::placeholder {
   color: rgba(0, 0, 0, 0.6);
-  font-style: italic; /* Customize the font style of the placeholder text */
+  font-style: italic;
   font-size: 16px;
   font-weight: bold;
   line-height: normal;
@@ -167,12 +165,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   display: none;
 }
 
-/* Style the custom label */
 input[type="date"] + label {
   color: rgba(0, 0, 0, 0.6);
   text-align: center;
   font-size: 16px;
-  display: block; /* Ensure the label is displayed as a block */
+  display: block;
 }
 
 input[type="date"]::before {
@@ -190,5 +187,59 @@ input[type="date"]::before {
 
 .acoes {
   display: flex;
-  border: 1px solid rgb(30, 30, 30);
+  margin-right: 2rem;
+}
+
+.content-table {
+  border-collapse: collapse;
+  margin: 0 auto;
+  font-size: 0.9em;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  background: #fff;
+}
+
+.content-table tbody tr th {
+  background-color: #984c00;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.content-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid #984c00;
+}
+
+.content-table tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
+}
+
+.glass {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.201),
+    rgba(255, 255, 255, 0.201)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
