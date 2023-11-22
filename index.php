@@ -2,55 +2,53 @@
 <html lang="pt-BR">
 
   <head>
+    <link rel="stylesheet" href="styles.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <title>Cadastro</title>
+    <title>Cadastrar Livro</title>
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Cadastro</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+    <nav>
+      <div>
+        <!-- <a href="#">Cadastro</a>
+        <button type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span></span>
+        </button> -->
+        <div>
+          <ul>
+            <li>
+              <a aria-current="page" href="index.php">Home</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="?page=novo">Novo Usuário</a>
+            <li>
+              <a href="?page=novo">Novo Livro</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="?page=listar">Listar Usuários</a>
+            <li>
+              <a href="?page=listar">Listar Livros</a>
             </li>
-
           </ul>
         </div>
       </div>
     </nav>
 
-    <div class="container">
-      <div class="row">
-        <div class="col mt-5">
+    <div>
+      <div>
+        <div>
           <?php
           include("config.php");
           switch (@$_REQUEST["page"]) {
             case "novo":
-              include("novo-usuario.php");
+              include("novo-livro.php");
               break;
             case "listar":
-              include("listar-usuario.php");
+              include("listar-livros.php");
               break;
             case "salvar":
-              include("salvar-usuario.php");
+              include("salvar-livro.php");
               break;
             case "editar":
-              include("editar-usuario.php");
+              include("editar-livro.php");
             default:
               print "<h1>Bem vindos!</h1>";
           }
@@ -58,9 +56,6 @@
         </div>
       </div>
     </div>
-
-
-    <script src="js/bootstrap.bundle.min.js"></script>
   </body>
 
 </html>

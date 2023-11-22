@@ -2,11 +2,11 @@
 switch ($_REQUEST["acao"]) {
   case "cadastrar":
     $nome = $_POST["nome"];
-    $email = $_POST["email"];
-    $senha = $_POST["senha"];
-    $data_nasc = $_POST["data_nasc"];
+    $autor = $_POST["autor"];
+    $data_lancamento = $_POST["data_lancamento"];
+    $qtd_estoque = $_POST["qtd_estoque"];
 
-    $sql = "INSERT INTO usuarios (nome, email, senha, data_nasc) VALUES ('{$nome}', '{$email}', '{$senha}', '{$data_nasc}')";
+    $sql = "INSERT INTO livros (nome, autor, data_lancamento, qtd_estoque) VALUES ('{$nome}', '{$autor}', '{$data_lancamento}', '{$qtd_estoque}')";
     $res = $conn->query($sql);
 
     if ($res == true) {
@@ -20,12 +20,12 @@ switch ($_REQUEST["acao"]) {
 
   case "editar":
     $nome = $_POST["nome"];
-    $email = $_POST["email"];
-    $senha = $_POST["senha"];
-    $data_nasc = $_POST["data_nasc"];
+    $autor = $_POST["autor"];
+    $data_lancamento = $_POST["data_lancamento"];
+    $qtd_estoque = $_POST["qtd_estoque"];
 
 
-    $sql = "UPDATE usuarios SET nome='{$nome}', email='{$email}', senha='{$senha}', data_nasc='{$data_nasc}' WHERE id=" . $_REQUEST["id"];
+    $sql = "UPDATE livros SET nome='{$nome}', autor='{$autor}', data_lancamento='{$data_lancamento}', qtd_estoque='{qtd_estoque}' WHERE id=" . $_REQUEST["id"];
 
     $res = $conn->query($sql);
 
@@ -39,7 +39,7 @@ switch ($_REQUEST["acao"]) {
     break;
 
   case "excluir":
-    $sql = "DELETE FROM usuarios WHERE id=" . $_REQUEST["id"];
+    $sql = "DELETE FROM livros WHERE id=" . $_REQUEST["id"];
     $res = $conn->query($sql);
 
     if ($res == true) {

@@ -2,7 +2,7 @@
 define("HOST", "localhost");
 define("USER", "root");
 define("PASS", "");
-define("BASE", "cadastro");
+define("BASE", "easy-bookstore-management");
 
 $conn = new MySQLi(HOST, USER, PASS, BASE)
   ?>
