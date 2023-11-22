@@ -11,24 +11,17 @@
   <body>
     <nav>
       <div>
-        <!-- <a href="#">Cadastro</a>
-        <button type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav"
-          aria-expanded="false" aria-label="Toggle navigation">
-          <span></span>
-        </button> -->
-        <div>
-          <ul>
-            <li>
-              <a aria-current="page" href="index.php">Home</a>
-            </li>
-            <li>
-              <a href="?page=novo">Novo Livro</a>
-            </li>
-            <li>
-              <a href="?page=listar">Listar Livros</a>
-            </li>
-          </ul>
-        </div>
+        <ul>
+          <li>
+            <a aria-current="page" href="index.php">Home</a>
+          </li>
+          <li>
+            <a href="?page=novo">Novo Livro</a>
+          </li>
+          <li>
+            <a href="?page=listar">Listar Livros</a>
+          </li>
+        </ul>
       </div>
     </nav>
 

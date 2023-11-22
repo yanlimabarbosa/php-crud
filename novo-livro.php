@@ -3,20 +3,16 @@
   <h1 class="subtitle">Preencha os dados</h1>
   <input type="hidden" name="acao" value="cadastrar">
   <div>
-    <label class="label-novo-livro">Nome</label>
     <input type="text" name="nome" placeholder="Nome">
   </div>
   <div>
-    <label class="label-novo-livro">Autor</label>
-    <input type=" text" name="autor">
+    <input type=" text" name="autor" placeholder="Autor">
   </div>
   <div>
-    <label class="label-novo-livro">Data de Lancamento</label>
-    <input type="date" name="data_lancamento" placeholder=" ">
+    <input type="date" name="data_lancamento">
   </div>
   <div>
-    <label class="label-novo-livro">Quantidade em Estoque:</label>
-    <input type="number" name="qtd_estoque">
+    <input type="number" name="qtd_estoque" placeholder="Quantidade">
   </div>
   <div>
     <button type="submit" class="send-btn">Enviar</button>

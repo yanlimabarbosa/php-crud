@@ -23,7 +23,7 @@ if ($qtd > 0) {
     print "<td>" . $row->autor . "</td>";
     print "<td>" . $row->data_lancamento . "</td>";
     print "<td>" . $row->qtd_estoque . "</td>";
-    print "<td>
+    print "<td class='acoes'>
             <button onclick=\"location.href='?page=editar&id=" . $row->id . "';\">Editar</button>
             <button onclick=\"if(confirm('Tem certeza que deseja excluir?')){location.href='?page=salvar&acao=excluir&id=" . $row->id . "';}else{false;}\">Excluir</button>
           </td>";

@@ -64,29 +64,34 @@ select {
 }
 
 table {
-  width: 100%;
+  margin: 0 auto;
+  width: 80%;
   border-collapse: collapse;
   margin-top: 20px;
-}
-
-table,
-th,
-td {
-  border: 1px solid #ddd;
+  border-radius: 1rem;
 }
 
 th,
 td {
-  padding: 10px;
+  padding: 1px;
   text-align: left;
+  color: gray;
+  background-color: white;
+  border: 2px solid rgb(30, 30, 30);
 }
 
 th {
-  background-color: #333;
-  color: white;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 1rem;
+}
+
+td {
+  padding: 0 auto;
 }
 
 button {
+  display: flex;
   padding: 10px;
   background-color: #333;
   color: white;
@@ -99,9 +104,9 @@ button:hover {
 }
 
 .form {
-  margin: 3rem auto;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  margin: 0.5rem auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   justify-content: center;
   background: rgb(255, 255, 255);
   box-shadow: 3px 4px 10px 0px rgba(0, 0, 0, 0.25);
@@ -120,24 +125,13 @@ button:hover {
 }
 
 .subtitle {
-  margin: 0 30%;
+  margin: 0 7rem;
   color: #000;
   font-size: 19px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
   margin-bottom: 1rem;
-}
-
-.label-novo-livro {
-  position: fixed;
-  margin-top: 1rem;
-  color: rgba(0, 0, 0, 0.6);
-  font-size: 23px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  pointer-events: none; /* Prevent label from interfering with input clicks */
 }
 
 #inputNome:placeholder-shown + .label-novo-livro {
@@ -159,4 +153,42 @@ button:hover {
   margin: 1rem 25% 0 25%;
   border-radius: 30px;
   background: #000000;
+}
+
+input::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+  font-style: italic; /* Customize the font style of the placeholder text */
+  font-size: 16px;
+  font-weight: bold;
+  line-height: normal;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+/* Style the custom label */
+input[type="date"] + label {
+  color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  font-size: 16px;
+  display: block; /* Ensure the label is displayed as a block */
+}
+
+input[type="date"]::before {
+  content: "Data de Lançamento";
+  color: rgba(0, 0, 0, 0.6);
+  display: block;
+  margin-right: 5rem;
+  margin-bottom: 5px;
+  font-style: italic;
+  font-weight: bold;
+  text-align: center;
+  font-size: 16px;
+  justify-content: space-between;
+}
+
+.acoes {
+  display: flex;
+  border: 1px solid rgb(30, 30, 30);
 }
