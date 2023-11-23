@@ -30,10 +30,10 @@ switch ($_REQUEST["acao"]) {
     $res = $conn->query($sql);
 
     if ($res == true) {
-      print "<script>alert('Editado com sucesso');</script>";
+      print "<script>alert('Editado com sucesso!');</script>";
       print "<script>location.href='?page=listar';</script>";
     } else {
-      print "<script>alert('Não foi possível editar');</script>";
+      print "<script>alert('Não foi possível editar!');</script>";
       print "<script>location.href='?page=listar';</script>";
     }
     break;
@@ -43,10 +43,10 @@ switch ($_REQUEST["acao"]) {
     $res = $conn->query($sql);
 
     if ($res == true) {
-      print "<script>alert('Excluido com sucesso');</script>";
+      print "<script>alert('Excluido com sucesso!');</script>";
       print "<script>location.href='?page=listar';</script>";
     } else {
-      print "<script>alert('Não foi possível excluir');</script>";
+      print "<script>alert('Não foi possível excluir!');</script>";
       print "<script>location.href='?page=listar';</script>";
     }
     break;

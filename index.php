@@ -13,15 +13,16 @@
       <div class="logo"><a href="#">Gerenciamento Fácil</a> </div>
       <ul>
         <li>
-          <a aria-current="page" href="index.php">Home</a>
+          <a aria-current="page" href="index.php">Início</a>
         </li>
         <li>
           <a href="?page=novo">Novo Livro</a>
         </li>
         <li>
-          <a href="?page=listar">Listar Livros</a>
+          <a href="?page=listar">Todos os Livros</a>
         </li>
       </ul>
+
 
     </nav>
 
@@ -43,7 +44,7 @@
             case "editar":
               include("editar-livro.php");
             default:
-              print "<h1>Bem vindos!</h1>";
+              include("inicio.php");
           }
           ?>
         </div>
